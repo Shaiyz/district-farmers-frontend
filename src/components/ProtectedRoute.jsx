@@ -3,15 +3,18 @@ import { Navigate, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 export default function ProtectedRoute({ children }) {
-  const {user}=useAuth()
-  const token = localStorage.getItem("token");
+  const {user, loading}=useAuth()
   const navigate=useNavigate()
   
   useEffect(()=>{
-    if(!user){
+    if(!loading && !user){
       navigate('/')
     }
-  },[user])
+  },[user,loading,navigate])
+  
+  if (loading) {
+    return <div className="p-6 text-center text-gray-500">Loading...</div>;
+  }
 
- return token ? children : <Navigate to="/" replace />;
+ return user ? children : <Navigate to="/" replace />;
 }
