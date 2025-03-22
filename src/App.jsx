@@ -6,6 +6,7 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import FormPage from "./pages/FormPage";
 import CustomerDetails from "./pages/CustomerDetails";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
              </ProtectedRoute>
           } />
           <Route path="/customers/:id" element={<CustomerDetails />} />
+          <Route path="*" element={<NotFound />} />
 
         </Routes>
       </Router>
