@@ -40,9 +40,10 @@ export default function CustomerDetails() {
     <div className="p-6">
       <h1 className="text-2xl font-semibold mb-4">Customer Details</h1>
       <div className="bg-white shadow-md rounded-lg p-6">
-        <p><strong>ID:</strong> {customer.id}</p>
         <p><strong>Name:</strong> {customer.name}</p>
         <p><strong>Email:</strong> {customer.email}</p>
+        <p><strong>Phone:</strong> {customer.phone}</p>
+
       </div>
     </div>
   );

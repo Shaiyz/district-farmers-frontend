@@ -2,7 +2,7 @@ import axios from "axios";
 
 const baseURL =
   process.env.NODE_ENV === "production"
-    ? "https://api.yourproductiondomain.com" 
+    ? "https://district-farmers-backend.onrender.com" 
     : "http://localhost:5001"; 
 
 const axiosInstance = axios.create({
