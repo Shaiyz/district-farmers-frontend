@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
       }
     }
     setLoading(false)
-  }, [user]); 
+  }, []); 
   
 
   const login = (token) => {
